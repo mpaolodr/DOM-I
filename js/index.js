@@ -50,23 +50,36 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 //navigation links
 
-//any other way to do this cleaner?
-const services = document.querySelector("nav a:nth-child(1)");
+const mission = document.createElement("a");
+const support = document.createElement("a");
+const navigation = document.querySelector("nav");
+mission.textContent = "Mission";
+support.textContent = "Support";
+navigation.prepend(mission); // won't work if nth-child is set. find something different
+navigation.append(support);
+console.log(navigation);
+
+const navLinks = document.querySelectorAll("nav a");
+navLinks.forEach(link => {
+  link.style.color = "green";
+});
+
+const services = document.querySelector("nav a:nth-child(2)");
 services.textContent = siteContent["nav"]["nav-item-1"];
 
-const product = document.querySelector("nav a:nth-child(2)");
+const product = document.querySelector("nav a:nth-child(3)");
 product.textContent = siteContent["nav"]["nav-item-2"];
 
-const vision = document.querySelector("nav a:nth-child(3)");
+const vision = document.querySelector("nav a:nth-child(4)");
 vision.textContent = siteContent["nav"]["nav-item-3"];
 
-const features = document.querySelector("nav a:nth-child(4)");
+const features = document.querySelector("nav a:nth-child(5)");
 features.textContent = siteContent["nav"]["nav-item-4"];
 
-const about = document.querySelector("nav a:nth-child(5)");
+const about = document.querySelector("nav a:nth-child(6)");
 about.textContent = siteContent["nav"]["nav-item-5"];
 
-const contact = document.querySelector("nav a:nth-child(6)");
+const contact = document.querySelector("nav a:nth-child(7)");
 contact.textContent = siteContent["nav"]["nav-item-6"];
 
 //CTA SECTION
