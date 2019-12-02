@@ -68,3 +68,16 @@ about.textContent = siteContent["nav"]["nav-item-5"];
 
 const contact = document.querySelector("nav a:nth-child(6)");
 contact.textContent = siteContent["nav"]["nav-item-6"];
+
+//CTA SECTION
+
+//cta text
+const ctaText = document.querySelector(".cta-text h1");
+ctaText.textContent = siteContent["cta"]["h1"];
+
+const ctaButton = document.querySelector(".cta-text button");
+ctaButton.textContent = siteContent["cta"]["button"];
+
+//cta-img
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
