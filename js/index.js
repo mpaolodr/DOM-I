@@ -86,22 +86,49 @@ ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
 //top content
 const mainFeatures = document.querySelector(".top-content div:first-child h4");
-mainFeatures.textContent = siteContent["main-content"]["features-h4"];
-
 const mainFeaturesContent = document.querySelector(
   ".top-content div:first-child p"
 );
+mainFeatures.textContent = siteContent["main-content"]["features-h4"];
 mainFeaturesContent.textContent =
   siteContent["main-content"]["features-content"];
 
 const mainAbout = document.querySelector(".top-content div:last-child h4");
-mainAbout.textContent = siteContent["main-content"]["about-h4"];
-
 const mainAboutContent = document.querySelector(
   ".top-content div:last-child p"
 );
+mainAbout.textContent = siteContent["main-content"]["about-h4"];
 mainAboutContent.textContent = siteContent["main-content"]["about-content"];
 
 //middle img
 const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+//bottom content
+const mainServices = document.querySelector(
+  ".bottom-content div:nth-child(1) h4"
+);
+const mainServicesContent = document.querySelector(
+  ".bottom-content div:nth-child(1) p"
+);
+mainServices.textContent = siteContent["main-content"]["services-h4"];
+mainServicesContent.textContent =
+  siteContent["main-content"]["services-content"];
+
+const mainProduct = document.querySelector(
+  ".bottom-content div:nth-child(2) h4"
+);
+const mainProductContent = document.querySelector(
+  ".bottom-content div:nth-child(2) p"
+);
+mainProduct.textContent = siteContent["main-content"]["product-h4"];
+mainProductContent.textContent = siteContent["main-content"]["product-content"];
+
+const mainVision = document.querySelector(
+  ".bottom-content div:nth-child(3) h4"
+);
+const mainVisionContent = document.querySelector(
+  ".bottom-content div:nth-child(3) p"
+);
+mainVision.textContent = siteContent["main-content"]["vision-h4"];
+mainVisionContent.textContent = siteContent["main-content"]["vision-content"];
