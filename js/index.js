@@ -49,7 +49,6 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 //HEADER SECTION
 
 //navigation links
-
 const mission = document.createElement("a");
 const support = document.createElement("a");
 const navigation = document.querySelector("nav");
@@ -57,11 +56,11 @@ mission.textContent = "Mission";
 support.textContent = "Support";
 navigation.prepend(mission); // won't work if nth-child is set. find something different
 navigation.append(support);
-console.log(navigation);
 
 const navLinks = document.querySelectorAll("nav a");
 navLinks.forEach(link => {
   link.style.color = "green";
+  link.style.fontSize = "1.2rem";
 });
 
 const services = document.querySelector("nav a:nth-child(2)");
@@ -90,14 +89,17 @@ ctaText.textContent = siteContent["cta"]["h1"];
 
 const ctaButton = document.querySelector(".cta-text button");
 ctaButton.textContent = siteContent["cta"]["button"];
+ctaButton.style.height = "50px";
+ctaButton.style.borderRadius = "20px";
 
 //cta-img
 const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
-//MAIN CONTENT SECTION
+//MAIN CONTENT SECTIOn
 
 //top content
+
 const mainFeatures = document.querySelector(".top-content div:first-child h4");
 const mainFeaturesContent = document.querySelector(
   ".top-content div:first-child p"
