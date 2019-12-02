@@ -132,3 +132,21 @@ const mainVisionContent = document.querySelector(
 );
 mainVision.textContent = siteContent["main-content"]["vision-h4"];
 mainVisionContent.textContent = siteContent["main-content"]["vision-content"];
+
+//CONTACT SECTION
+const contactContainer = document.querySelector(".contact");
+const contactTitle = document.querySelector(".contact h4");
+const address = document.querySelector(".contact p:nth-child(2)");
+const phone = document.querySelector(".contact p:nth-child(3)");
+const email = document.querySelector(".contact p:nth-child(4)");
+
+contactContainer.style.display = "grid";
+contactContainer.style.justifyItems = "center";
+contactTitle.textContent = siteContent["contact"]["contact-h4"];
+address.textContent = siteContent["contact"]["address"];
+phone.textContent = siteContent["contact"]["phone"];
+email.textContent = siteContent["contact"]["email"];
+
+//FOOTER SECTION
+const footer = document.querySelector("footer p");
+footer.textContent = siteContent["footer"]["copyright"];
