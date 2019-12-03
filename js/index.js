@@ -92,6 +92,22 @@ ctaButton.textContent = siteContent["cta"]["button"];
 ctaButton.style.height = "50px";
 ctaButton.style.borderRadius = "20px";
 
+//Event listener
+// const darkMode = document.querySelector(".dark");
+// darkMode.style.backgroundColor = "slategrey";
+// darkMode.style.color = "white";
+// console.log(darkMode);
+
+ctaButton.addEventListener("click", function() {
+  let changeBackground = document.querySelector("body");
+  changeBackground.style.backgroundColor = "slategrey";
+  changeBackground.style.color = "white";
+
+  navLinks.forEach(link => {
+    link.style.color = "white";
+  });
+});
+
 //cta-img
 const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
