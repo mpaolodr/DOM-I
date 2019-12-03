@@ -50,20 +50,9 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 //navigation links
 
-const mission = document.createElement("a");
-const support = document.createElement("a");
 const navigation = document.querySelector("nav");
-mission.textContent = "Mission";
-support.textContent = "Support";
-navigation.prepend(mission); // won't work if nth-child is set. find something different
-navigation.append(support);
-console.log(navigation);
 
-const navLinks = document.querySelectorAll("nav a");
-navLinks.forEach(link => {
-  link.style.color = "green";
-});
-
+/*
 const services = document.querySelector("nav a:nth-child(2)");
 services.textContent = siteContent["nav"]["nav-item-1"];
 
@@ -81,6 +70,34 @@ about.textContent = siteContent["nav"]["nav-item-5"];
 
 const contact = document.querySelector("nav a:nth-child(7)");
 contact.textContent = siteContent["nav"]["nav-item-6"];
+*/
+
+const navLinks = document.querySelectorAll("nav a");
+
+const navArr = Object.keys(siteContent["nav"]);
+console.log(navArr);
+
+const newArr = navArr.filter(item => {
+  return item !== "img-src";
+});
+
+navLinks.forEach((link, i) => {
+  link.textContent = siteContent["nav"][newArr[i]];
+  link.style.color = "green";
+});
+
+const mission = document.createElement("a");
+const support = document.createElement("a");
+
+mission.textContent = "Mission";
+support.textContent = "Support";
+mission.href = "#";
+support.href = "#";
+mission.style.color = "green";
+support.style.color = "green";
+
+navigation.prepend(mission);
+navigation.append(support);
 
 //CTA SECTION
 
