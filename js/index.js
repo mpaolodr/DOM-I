@@ -49,37 +49,51 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 //HEADER SECTION
 
 //navigation links
-const mission = document.createElement("a");
-const support = document.createElement("a");
-const navigation = document.querySelector("nav");
-mission.textContent = "Mission";
-support.textContent = "Support";
-navigation.prepend(mission);
-navigation.append(support);
+
+// const services = document.querySelector("nav a:nth-child(2)");
+// services.textContent = siteContent["nav"]["nav-item-1"];
+
+// const product = document.querySelector("nav a:nth-child(3)");
+// product.textContent = siteContent["nav"]["nav-item-2"];
+
+// const vision = document.querySelector("nav a:nth-child(4)");
+// vision.textContent = siteContent["nav"]["nav-item-3"];
+
+// const features = document.querySelector("nav a:nth-child(5)");
+// features.textContent = siteContent["nav"]["nav-item-4"];
+
+// const about = document.querySelector("nav a:nth-child(6)");
+// about.textContent = siteContent["nav"]["nav-item-5"];
+
+// const contact = document.querySelector("nav a:nth-child(7)");
+// contact.textContent = siteContent["nav"]["nav-item-6"];
 
 const navLinks = document.querySelectorAll("nav a");
-navLinks.forEach(link => {
-  link.style.color = "green";
-  link.style.fontSize = "1.2rem";
+
+const navArr = Object.keys(siteContent["nav"]);
+console.log(navArr);
+
+const newArr = navArr.filter(item => {
+  return item !== "img-src";
 });
 
-const services = document.querySelector("nav a:nth-child(2)");
-services.textContent = siteContent["nav"]["nav-item-1"];
+navLinks.forEach((link, i) => {
+  link.textContent = siteContent["nav"][newArr[i]];
+  link.style.color = "green";
+});
 
-const product = document.querySelector("nav a:nth-child(3)");
-product.textContent = siteContent["nav"]["nav-item-2"];
+const mission = document.createElement("a");
+const support = document.createElement("a");
 
-const vision = document.querySelector("nav a:nth-child(4)");
-vision.textContent = siteContent["nav"]["nav-item-3"];
+mission.textContent = "Mission";
+support.textContent = "Support";
+mission.href = "#";
+support.href = "#";
+mission.style.color = "green";
+support.style.color = "green";
 
-const features = document.querySelector("nav a:nth-child(5)");
-features.textContent = siteContent["nav"]["nav-item-4"];
-
-const about = document.querySelector("nav a:nth-child(6)");
-about.textContent = siteContent["nav"]["nav-item-5"];
-
-const contact = document.querySelector("nav a:nth-child(7)");
-contact.textContent = siteContent["nav"]["nav-item-6"];
+navigation.prepend(mission);
+navigation.append(support);
 
 //CTA SECTION
 
