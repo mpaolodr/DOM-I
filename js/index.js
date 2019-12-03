@@ -93,10 +93,6 @@ ctaButton.style.height = "50px";
 ctaButton.style.borderRadius = "20px";
 
 //Event listener
-// const darkMode = document.querySelector(".dark");
-// darkMode.style.backgroundColor = "slategrey";
-// darkMode.style.color = "white";
-// console.log(darkMode);
 
 ctaButton.addEventListener("click", function() {
   let changeBackground = document.querySelector("body");
