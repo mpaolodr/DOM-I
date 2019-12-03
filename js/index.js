@@ -68,6 +68,11 @@ const navigation = document.querySelector("nav");
 // const contact = document.querySelector("nav a:nth-child(7)");
 // contact.textContent = siteContent["nav"]["nav-item-6"];
 
+/*
+const contact = document.querySelector("nav a:nth-child(7)");
+contact.textContent = siteContent["nav"]["nav-item-6"];
+*/
+
 const navLinks = document.querySelectorAll("nav a");
 
 const navArr = Object.keys(siteContent["nav"]);
