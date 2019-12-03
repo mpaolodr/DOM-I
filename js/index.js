@@ -49,25 +49,26 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 //HEADER SECTION
 
 //navigation links
-
 const navigation = document.querySelector("nav");
+// const services = document.querySelector("nav a:nth-child(2)");
+// services.textContent = siteContent["nav"]["nav-item-1"];
+
+// const product = document.querySelector("nav a:nth-child(3)");
+// product.textContent = siteContent["nav"]["nav-item-2"];
+
+// const vision = document.querySelector("nav a:nth-child(4)");
+// vision.textContent = siteContent["nav"]["nav-item-3"];
+
+// const features = document.querySelector("nav a:nth-child(5)");
+// features.textContent = siteContent["nav"]["nav-item-4"];
+
+// const about = document.querySelector("nav a:nth-child(6)");
+// about.textContent = siteContent["nav"]["nav-item-5"];
+
+// const contact = document.querySelector("nav a:nth-child(7)");
+// contact.textContent = siteContent["nav"]["nav-item-6"];
 
 /*
-const services = document.querySelector("nav a:nth-child(2)");
-services.textContent = siteContent["nav"]["nav-item-1"];
-
-const product = document.querySelector("nav a:nth-child(3)");
-product.textContent = siteContent["nav"]["nav-item-2"];
-
-const vision = document.querySelector("nav a:nth-child(4)");
-vision.textContent = siteContent["nav"]["nav-item-3"];
-
-const features = document.querySelector("nav a:nth-child(5)");
-features.textContent = siteContent["nav"]["nav-item-4"];
-
-const about = document.querySelector("nav a:nth-child(6)");
-about.textContent = siteContent["nav"]["nav-item-5"];
-
 const contact = document.querySelector("nav a:nth-child(7)");
 contact.textContent = siteContent["nav"]["nav-item-6"];
 */
@@ -107,14 +108,29 @@ ctaText.textContent = siteContent["cta"]["h1"];
 
 const ctaButton = document.querySelector(".cta-text button");
 ctaButton.textContent = siteContent["cta"]["button"];
+ctaButton.style.height = "50px";
+ctaButton.style.borderRadius = "20px";
+
+//Event listener
+
+ctaButton.addEventListener("click", function() {
+  let changeBackground = document.querySelector("body");
+  changeBackground.style.backgroundColor = "slategrey";
+  changeBackground.style.color = "white";
+
+  navLinks.forEach(link => {
+    link.style.color = "white";
+  });
+});
 
 //cta-img
 const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
-//MAIN CONTENT SECTION
+//MAIN CONTENT SECTIOn
 
 //top content
+
 const mainFeatures = document.querySelector(".top-content div:first-child h4");
 const mainFeaturesContent = document.querySelector(
   ".top-content div:first-child p"
