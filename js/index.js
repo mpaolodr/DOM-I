@@ -49,7 +49,7 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 //HEADER SECTION
 
 //navigation links
-
+const navigation = document.querySelector("nav");
 // const services = document.querySelector("nav a:nth-child(2)");
 // services.textContent = siteContent["nav"]["nav-item-1"];
 
