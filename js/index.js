@@ -54,7 +54,7 @@ const support = document.createElement("a");
 const navigation = document.querySelector("nav");
 mission.textContent = "Mission";
 support.textContent = "Support";
-navigation.prepend(mission); // won't work if nth-child is set. find something different
+navigation.prepend(mission);
 navigation.append(support);
 
 const navLinks = document.querySelectorAll("nav a");

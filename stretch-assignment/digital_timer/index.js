@@ -22,6 +22,11 @@
 //   msTens = null;
 // }
 
+const doc = document.querySelector(".digits");
+doc.style.width = "50%";
+doc.style.margin = "0 auto";
+doc.style.textAlign = "center";
+
 setInterval(function() {
   let sec = new Date().getSeconds();
   let ms = new Date().getMilliseconds();
